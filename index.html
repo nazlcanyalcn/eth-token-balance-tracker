@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETH Token Balance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Ethereum Token Balance Tracker</h1>
+            <p>Check any Ethereum wallet's token balances</p>
+        </header>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="walletAddress" 
+                placeholder="Enter Ethereum address (0x...)"
+                class="wallet-input"
+            >
+            <button id="checkBalance" class="btn-primary">Check Balance</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading balances...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="results" class="results hidden">
+            <h2>Balance Results</h2>
+            
+            <div class="balance-card eth-balance">
+                <div class="token-info">
+                    <span class="token-symbol">ETH</span>
+                    <span class="token-name">Ethereum</span>
+                </div>
+                <div class="balance-amount" id="ethBalance">0</div>
+            </div>
+
+            <div id="tokenList" class="token-list"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
